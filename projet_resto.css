@@ -1,170 +1,210 @@
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        p {
-            font-weight: 300;
-            color: #1111;
-        }
-        
-        header {
-            position: relative;
-            top: 0%;
-            left: 0%;
-            width: 100%;
-            padding: 20px 10px;
-            z-index: 1;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            transition: 0.5s;
-        }
-        
-        .logo {
-            color: #fff;
-            font-weight: bold;
-            font-size: 2em;
-            text-decoration: none;
-        }
-        
-        .logo span {
-            color: #fb911f;
-        }
-        
-        .navbar {
-            display: flex;
-            position: relative;
-        }
-        
-        .navbar li {
-            list-style: none;
-        }
-        
-        .navbar a {
-            /color: #fff;
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 700;
-        }
-        
-        .btn-reserve {
-            padding: 10px 20px;
-            color: cornflowerblue;
-            background: #fb911f;
-            margin-top: -10px;
-        }
-        
-        .btn-reserve:hover {
-            color: aqua;
-            background: #fb911f;
-            transition: ease-in-out;
-        }
-        
-        header .navbar li a:hover {
-            border-bottom: 10px solid #fb911f;
-            border-left: ease-in-out;
-        }
-        
-        .banniere {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url(OIP.jpg);
-            background-size: cover;
-            background-color: burlywood;
-        }
-        
-        .banniere .contenu {
-            text-align: center;
-            max-width: 70%;
-            background-color: #fb911f;
-        }
-        
-        .banniere .contenu h2 {
-            color: #110101;
-            font-size: 150%;
-        }
-        
-        .contenu p:nth-child(2) {
-            color: #fff;
-            font-size: 85%;
-        }
-        
-        .btn1 {
-            font-size: 40%;
-            color: #fb911f;
-            background-color: bisque;
-            padding: 10px 20px;
-            display: inline-block;
-            margin-top: 20px;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: 0.5s;
-            margin-left: 10px;
-        }
-        
-        .btn2 {
-            font-size: 40%;
-            color: #fb911f;
-            background-color: black;
-            padding: 10px 20px;
-            display: inline-block;
-            margin-top: 20px;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: 0.5s;
-            margin-left: 10px;
-        }
-        
-        .btn1:hover {
-            letter-spacing: 4px;
-        }
-        
-        @media screen and (max-width: 900px) {
-            .navbar {
-                display: flex;
-                backdrop-filter: blur(0.5px);
-                height: 2000vh;
-                width: 100vw;
-                padding: 0;
-                position: absolute;
-                top: 0;
-                right: 0px;
-                left: 0px;
-                align-items: center;
-                flex-direction: column;
-            }
-            .logo {
-                position: absolute;
-                left: 20px;
-                top: 10px;
-            }
-            header .logo {
-                position: absolute;
-                z-index: 1;
-            }
-            .navbar li {
-                position: relative;
-                line-height: 1;
-                margin: 30px 25px;
-                font-size: 1.2em;
-                margin: -100;
-            }
-            .mobile-menu {
-                position: absolute;
-                margin-top: 0;
-                left: 0;
-            }
-            .contenu {
-                display: none;
-            }
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-weight: 300;
+  color: #1111;
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background-color: #fb911f; /* Add background color to header */
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #fb911f;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  list-style: none; /* Remove list style */
+}
+
+.navbar li {
+  margin-left: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-reserve {
+  padding: 10px 20px;
+  color: cornflowerblue;
+  background: #fb911f;
+  margin-top: -10px;
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add rounded corners to button */
+  cursor: pointer; /* Add cursor on hover */
+}
+
+.btn-reserve:hover {
+  color: aqua;
+  background: #fb911f;
+  transition: ease-in-out;
+}
+
+header .navbar li a:hover {
+  border-bottom: 10px solid #fb911f;
+  border-left: ease-in-out;
+}
+
+.banniere {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(OIP.jpg); /* Replace with your image URL */
+  background-size: cover;
+  background-color: burlywood;
+}
+
+.banniere .contenu {
+  text-align: center;
+  max-width: 70%;
+  background-color: #fb911f;
+  padding: 30px; /* Add padding to the content */
+}
+
+.banniere .contenu h2 {
+  color: #110101;
+  font-size: 2em;
+  margin-bottom: 20px; /* Add margin below the heading */
+}
+
+.contenu p:nth-child(2) {
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5; /* Improve readability */
+}
+
+.btn1 {
+  font-size: 1em;
+  color: #fb911f;
+  background-color: bisque;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  margin-left: 10px;
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add rounded corners to button */
+  cursor: pointer; /* Add cursor on hover */
+}
+
+.btn2 {
+  font-size: 1em;
+  color: #fb911f;
+  background-color: black;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  margin-left: 10px;
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add rounded corners to button */
+  cursor: pointer; /* Add cursor on hover */
+}
+
+.btn1:hover {
+  letter-spacing: 4px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .hamburger-menu.active + .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fb911f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+  }
+
+  .navbar li {
+    margin: 20px 0;
+  }
+
+  .navbar a {
+    color: #1111;
+    font-size: 1.2em;
+  }
+
+  .banniere .contenu {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .banniere .contenu h2 {
+    font-size: 120%;
+  }
+}
